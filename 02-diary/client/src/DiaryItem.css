@@ -1,0 +1,83 @@
+.DiaryItem {
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DiaryItem-inputBox {
+  width: 100%;
+}
+
+.DiaryItem-label {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+.DiaryItem-titleForm,
+.DiaryItem-bodyForm {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  padding: 8px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.DiaryItem-titleForm {
+  margin-bottom: 1rem;
+}
+.DiaryItem-bodyForm {
+  height: 16rem;
+  margin-bottom: 2rem;
+}
+
+.DiaryItem-diaryBox {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.DiaryItem-title {
+  font-size: 1.6rem;
+}
+
+.DiaryItem-body {
+  font-size: 1.4rem;
+}
+
+.DiaryItem-buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem-button {
+  font-size: 1.4rem;
+  padding: 4px 12px;
+  border: 1px solid;
+  border-color: #c89411 #b0820f #99710d;
+  border-radius: 3px;
+  background-image: linear-gradient(to bottom, #f8e3ad, #eeba37);
+  box-shadow: inset 0 1px 0 0 #fcf3dc;
+  cursor: pointer;
+  outline: none;
+}
+.DiaryItem-button:first-of-type {
+  margin-right: 5px;
+}
+.DiaryItem-button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)),
+    linear-gradient(to bottom, #f8e3ad, #eeba37);
+}
+.DiaryItem-button:active {
+  padding: 5px 13px;
+  border: 0;
+  background-color: #eeba37;
+  background-image: none;
+}

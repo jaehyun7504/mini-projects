@@ -1,0 +1,8 @@
+# node_modules folders
+node_modules
+
+# Environment variables file
+config.env
+
+# MongoDB client file
+02-diary/utils/database.js

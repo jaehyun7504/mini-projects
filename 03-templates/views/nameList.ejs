@@ -1,0 +1,10 @@
+<%- include('./includes/head.ejs') %> <%- include('./includes/navigation.ejs')%>
+<% if (names.length > 0) { %>
+<ol>
+  <% for (name of names) { %>
+  <li><%= name %></li>
+  <% } %>
+</ol>
+<% } else { %>
+<h1>Names Not Found</h1>
+<% } %> <%- include('./includes/end.ejs') %>

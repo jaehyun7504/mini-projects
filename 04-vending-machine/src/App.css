@@ -1,0 +1,30 @@
+.App {
+  height: 100vh;
+}
+
+.App-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: #0984e3;
+  z-index: 100;
+}
+
+.App-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.App-link {
+  text-decoration: none;
+  color: white;
+}
+
+.App-link-active {
+  color: #74b9ff;
+}

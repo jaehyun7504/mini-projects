@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-120rem); } }
+
+.scroll-image {
+  position: relative;
+  width: 60rem;
+  height: 40rem;
+  overflow: hidden;
+  margin: 0 auto; }
+  .scroll-image__row {
+    position: absolute;
+    width: 200rem;
+    height: 20rem; }
+    .scroll-image__row--1 {
+      top: 0;
+      left: 0;
+      animation: scroll 40s linear infinite; }
+    .scroll-image__row--2 {
+      top: 20rem;
+      left: 0;
+      animation: scroll 30s linear infinite reverse; }
+  .scroll-image__img {
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    text-align: center;
+    margin-right: -0.36rem; }

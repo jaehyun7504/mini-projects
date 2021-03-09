@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './Diary.css';
 
 import DiaryItem from './DiaryItem';
 import DiaryItemForm from './DiaryItemForm';
+
+axios.defaults.baseURL = 'http://localhost:5000/api/';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 class Diary extends Component {
   constructor(props) {
@@ -14,19 +18,31 @@ class Diary extends Component {
     this.updateItem = this.updateItem.bind(this);
   }
 
-  createItem(diaryItem) {
-    this.setState(state => ({
-      diaryItems: [...state.diaryItems, diaryItem],
-    }));
+  async getDiary() {
+    const response = await axios.get('/get/');
+    const data = response.data;
+    this.setState({ diaryItems: data });
   }
 
-  deleteItem(id) {
+  async componentDidMount() {
+    await this.getDiary();
+  }
+
+  async createItem(diaryItem) {
+    await axios.post(
+      'http://localhost:5000/api/create/',
+      JSON.stringify(diaryItem)
+    );
+    await this.getDiary();
+  }
+
+  async deleteItem(id) {
     this.setState(state => ({
       diaryItems: state.diaryItems.filter(diaryItem => diaryItem.id !== id),
     }));
   }
 
-  updateItem(id, updatedItem) {
+  async updateItem(id, updatedItem) {
     this.setState(state => ({
       diaryItems: state.diaryItems.map(diaryItem => {
         if (diaryItem.id === id) return { ...updatedItem, id: diaryItem.id };
@@ -40,8 +56,8 @@ class Diary extends Component {
       this.state.diaryItems.length > 0 ? (
         this.state.diaryItems.map(diaryItem => (
           <DiaryItem
-            key={diaryItem.id}
-            id={diaryItem.id}
+            key={diaryItem._id}
+            id={diaryItem._id}
             title={diaryItem.title}
             body={diaryItem.body}
             deleteItem={this.deleteItem}

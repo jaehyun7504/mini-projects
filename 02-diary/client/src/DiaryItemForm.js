@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { nanoid } from 'nanoid';
 
 import './DiaryItemForm.css';
 
@@ -17,7 +16,7 @@ class DiaryItemForm extends Component {
 
   handleCreateItem(e) {
     e.preventDefault();
-    const newDiaryItem = { ...this.state, id: nanoid(12) };
+    const newDiaryItem = { ...this.state };
     this.props.createItem(newDiaryItem);
     this.setState({ title: '', body: '' });
   }

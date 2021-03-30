@@ -6,3 +6,5 @@ config.env
 
 # MongoDB client file
 02-diary/utils/database.js
+
+ckeditor5

@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.ck-editor__editable h1:first-of-type {
+  margin-bottom: 1.44rem;
+}

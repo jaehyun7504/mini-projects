@@ -4,9 +4,19 @@
 }
 
 .title {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 300;
 }
 
 .ck-editor__editable h1:first-of-type {
-  margin-bottom: 1.44rem;
+  padding-bottom: 14.4px;
+}
+
+.ck-toolbar,
+.ck-read-only {
+  border: 0 !important;
+}
+
+.gap {
+  height: 2rem;
 }
